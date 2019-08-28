@@ -30,6 +30,8 @@ RUN_ARGS=(
     -v $(pwd)/data/config/pacmanfm:/home/$(whoami)/.config/pacmanfm
     -v $(pwd)/data/config/libfm:/home/$(whoami)/.config/libfm
 
+    -v $(pwd)/data/Projects:/home/$(whoami)/Projects
+
     -v /media:/media
     -v $HOME/Downloads:$HOME/Downloads
     -v $HOME/Documents:$HOME/Documents
