@@ -33,9 +33,11 @@ RUN_ARGS=(
     -v $(pwd)/data/Projects:/home/$(whoami)/Projects
 
     -v /media:/media
+    -v $HOME/Desktop:$HOME/Desktop
     -v $HOME/Downloads:$HOME/Downloads
     -v $HOME/Documents:$HOME/Documents
     -v $HOME/docker:$HOME/docker
+    -v $HOME/.docker-things:$HOME/.docker-things
 
     --rm
     -d
