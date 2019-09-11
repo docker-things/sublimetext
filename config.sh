@@ -12,6 +12,12 @@ FIFO_PATH="/tmp/docker-things/fifo"
 # The name of the docker image
 PROJECT_NAME="sublimetext"
 
+# Meta to set in the .desktop file
+APP_GENERIC_NAME="Text Editor"
+APP_CATEGORIES="TextEditor;Development;"
+APP_MIME_TYPE="text/plain;"
+APP_PARAM="%F"
+
 # BUILD ARGS
 BUILD_ARGS=(
     )
