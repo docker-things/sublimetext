@@ -25,10 +25,12 @@ RUN apt-get install -y --no-install-recommends \
  && apt-get autoclean -y \
  && apt-get autoremove -y
 
-RUN ln -s /usr/bin/subl /usr/bin/sublimetext
+COPY install/sublimetext /usr/bin/sublimetext
+RUN chmod +x /usr/bin/sublimetext
 
 # SET USER
 USER $DOCKER_USERNAME
 
 # ENTRYPOINT
 ENTRYPOINT ["/usr/bin/sublimetext"]
+
