@@ -25,9 +25,10 @@ RUN apt-get install -y --no-install-recommends \
  && apt-get autoclean -y \
  && apt-get autoremove -y
 
+RUN ln -s /usr/bin/subl /usr/bin/sublimetext
+
 # SET USER
 USER $DOCKER_USERNAME
 
 # ENTRYPOINT
-ENTRYPOINT /usr/bin/subl
-
+ENTRYPOINT ["/usr/bin/sublimetext"]
