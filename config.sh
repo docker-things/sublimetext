@@ -30,7 +30,7 @@ RUN_ARGS=(
     -v $XAUTHORITY:/tmp/.Xauthority
     -e XAUTHORITY=/tmp/.Xauthority
 
-    --memory="2g"
+    --memory="4g"
     --cpu-shares=1024
 
     -v $(pwd)/data/cache:/home/$(whoami)/.cache
