@@ -1,7 +1,8 @@
 FROM gui-apps-base:18.04
 MAINTAINER Gabriel Ionescu <gabi.ionescu+dockerthings@protonmail.com>
 
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
         apt-transport-https \
         apt-utils \
         gpg-agent \
