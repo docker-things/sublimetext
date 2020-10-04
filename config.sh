@@ -33,20 +33,9 @@ RUN_ARGS=(
     --memory="4g"
     --cpu-shares=1024
 
-    -v $(pwd)/data/cache:/home/$(whoami)/.cache
-    -v $(pwd)/data/codeintel:/home/$(whoami)/.codeintel
-    -v $(pwd)/data/config/sublime-text-3:/home/$(whoami)/.config/sublime-text-3
-    -v $(pwd)/data/config/pacmanfm:/home/$(whoami)/.config/pacmanfm
-    -v $(pwd)/data/config/libfm:/home/$(whoami)/.config/libfm
-
-    -v $(pwd)/data/Projects:/home/$(whoami)/Projects
-
+    -v $(pwd)/data:/home/sublimetext
     -v /media:/media
-    -v $HOME/Desktop:$HOME/Desktop
-    -v $HOME/Downloads:$HOME/Downloads
-    -v $HOME/Documents:$HOME/Documents
-    -v $HOME/docker:$HOME/docker
-    -v $HOME/.docker-things:$HOME/.docker-things
+    -v $HOME:$HOME
 
     --rm
     -d
