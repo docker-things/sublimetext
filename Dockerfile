@@ -1,4 +1,4 @@
-FROM gui-apps-base:18.04
+FROM gui-apps-base:20.04
 MAINTAINER Gabriel Ionescu <gabi.ionescu+dockerthings@protonmail.com>
 
 RUN echo "\n > REMOVE HOST USER\n" \
@@ -33,14 +33,13 @@ RUN echo "\n > REMOVE HOST USER\n" \
         software-properties-common \
         wget \
         sudo \
-        nautilus \
         git \
         subversion \
- && add-apt-repository -y ppa:ondrej/php \
- && apt-get update \
- && apt-get install -y --no-install-recommends \
-        php7.2 \
-        php7.2-cli \
+# && add-apt-repository -y ppa:ondrej/php \
+# && apt-get update \
+# && apt-get install -y --no-install-recommends \
+#        php7.2 \
+#        php7.2-cli \
  \
  && echo "\n > INSTALL SUBLIME TEXT\n" \
  && wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - \
@@ -50,6 +49,9 @@ RUN echo "\n > REMOVE HOST USER\n" \
         sublime-text \
  \
  && echo "\n > CLEANUP\n" \
+ && apt-get purge -y \
+        software-properties-common \
+        gpg-agent \
  && apt-get clean -y \
  && apt-get autoclean -y \
  && apt-get autoremove -y
