@@ -33,8 +33,11 @@ RUN echo "\n > REMOVE HOST USER\n" \
         software-properties-common \
         wget \
         sudo \
+ && echo "\n > INSTALL DEV UTILITIES\n" \
+ && apt-get install -y --no-install-recommends \
         git \
         subversion \
+        golang \
 # && add-apt-repository -y ppa:ondrej/php \
 # && apt-get update \
 # && apt-get install -y --no-install-recommends \
