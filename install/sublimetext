@@ -2,3 +2,8 @@
 
 /usr/bin/subl $@
 
+sleep 1s
+
+while [ "`ps | grep sublime_text`" != "" ]; do
+  sleep 2s
+done

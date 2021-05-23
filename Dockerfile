@@ -1,4 +1,4 @@
-FROM gui-apps-base:20.04
+FROM gui-apps-base:21.04
 MAINTAINER Gabriel Ionescu <gabi.ionescu+dockerthings@protonmail.com>
 
 RUN echo "\n > REMOVE HOST USER\n" \
@@ -33,6 +33,7 @@ RUN echo "\n > REMOVE HOST USER\n" \
         software-properties-common \
         wget \
         sudo \
+        libgl1 \
  && echo "\n > INSTALL DEV UTILITIES\n" \
  && apt-get install -y --no-install-recommends \
         git \
@@ -68,3 +69,4 @@ USER sublimetext
 
 # ENTRYPOINT
 ENTRYPOINT ["/usr/bin/sublimetext"]
+
